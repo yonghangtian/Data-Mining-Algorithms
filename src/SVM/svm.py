@@ -31,6 +31,7 @@ data.extend(test_data)
 vectorizer = TfidfVectorizer()
 X_train = vectorizer.fit_transform(train_data)
 X_test = vectorizer.transform(test_data)
+# weight = X_train[0:10].toarray()
 
 #print(X.shape)
 # matrix of train value
@@ -49,11 +50,11 @@ numb_labels = [trans_dic1[x] for x in train_label]
 
 #build the classifier
 cla = svm.SVC(max_iter=500, gamma='scale', decision_function_shape='ovo')
-cla.fit(X_train,numb_labels)
+cla.fit(X_train, numb_labels)
 predict_trainlabel = cla.predict(X_train)
 
 '''
- print to show the prediction accuracy on the trainning data 
+ print to show the prediction accuracy on the trainning data
  tune parameters according to the prediction accuracy
  after tuning parameters the accuracy achieve 93.4%, which is good enough to make predictions
 '''
