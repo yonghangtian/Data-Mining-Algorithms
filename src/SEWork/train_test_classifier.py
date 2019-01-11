@@ -1,5 +1,5 @@
 from sklearn import svm
-from SEWork.Preprocess import *
+from SEWork.preprocess import *
 
 
 def train_test_svm(cla):
