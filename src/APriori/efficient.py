@@ -1,6 +1,9 @@
 from efficient_apriori import apriori
 from Lib import re
 
+# data formate in asso.csv file:
+# 1 is the line number, the rest are data.
+# 1, 2, 5, 27, 29, 32, 48
 
 def load_data_set():
     asso_file = open('./asso.csv', encoding='utf8')
